@@ -55,4 +55,5 @@ graph TD
 ## 🔍 Detalles Académicos
 - Asignatura: Concurrencia (Grado en Ingeniería Informática)
 - Universidad: Universidad Politécnica de Madrid
+- Curso: 2023-2024
 - Autor: Eduardo Gil Alba
