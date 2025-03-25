@@ -5,19 +5,17 @@ Implementación de un sistema de gestión de cuentas bancarias con operaciones c
 2. **JCSP** (Java Communicating Sequential Processes) (Práctica 2)
 
 ## 📋 Enunciado Original
-El proyecto simula una entidad bancaria con cuatro tipos de procesos concurrentes:
+El proyecto simula una entidad bancaria con 2 tipos de procesos concurrentes:
 - **Cajeros**: Realizan ingresos
-- **Ordenantes**: Gestionan transferencias
-- **Avisadores**: Monitorizan saldos mínimos
-- **Consultores**: Consultan saldos periódicamente
+- **Usuarios**: Realizan transferencias, consultan el saldo y realizan alertas sobre su saldo
 
 ## 📊 Diagrama de Arquitectura
 ```mermaid
 graph TD
-    Cajero -->|ingresar| Banco
-    Ordenante -->|transferir| Banco
-    Avisador -->|alertar| Banco
-    Consultor -->|disponible| Banco
+    Cajero -->|crear| Banco
+    Usuario -->|transferir| Banco
+    Usuario -->|alertarMax| Banco
+    Usuario -->|disponible| Banco
     
     style Banco fill:#f9f,stroke:#333
 ```
